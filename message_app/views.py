@@ -7,10 +7,10 @@ from .models import messages_data
 class MessagesCreate(generics.CreateAPIView):
     queryset = messages_data.objects.all()
     serializer_class = MessagesDataSerializer
-    method = ['post']
+    http_method_names = ['post']
 
 class MessagesList(generics.ListAPIView):
     queryset = messages_data.objects.all()
     serializer_class = MessagesDataSerializer
-    mehtod = ['get']
+    http_method_names = ['get']
 
